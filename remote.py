@@ -26,6 +26,8 @@ def on_press(key):
         text += "\n"
     elif key == keyboard.Key.cmd:
         text.replace("Key.cmd","CMD")
+    elif key == keyboard.Key.cmd_r:
+        text.replace("Key.cmd_r"," ")
     elif key == keyboard.Key.tab:
         text += "\t"
     elif key == keyboard.Key.space:
